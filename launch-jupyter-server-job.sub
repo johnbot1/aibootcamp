@@ -31,13 +31,11 @@
 # Job Name 
 #SBATCH -J "jupyter-server-aibootcamp"
 
-# Save output to a log directory in current working directory
-# mkdir logs first
+# Save output to a log directory within the aibootcamp directory
+# cd to aibootcamp dir before running sbatch
 
 #SBATCH -o ./logs/slurm.%N.%j.out # STDOUT
 #SBATCH -e ./logs/slurm.%N.%j.err # STDERR
-
-# LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
 
 # Setup individual ports or each jupyter process. Default Jupyter
 # port is 8888. Creating a mapping of student to port beforehand
@@ -46,7 +44,7 @@ port=8900
 
 echo "Your Jupyter process is running on node $SLURM_NODELIST on Port $port" 
 
-# Edit this to match whatever virtual python environment is being used. This
+# Edit this to match the virtual python environment being used. This
 # example is for conda. 
 
 source /central/groups/imss_admin/jflilley/miniconda3/etc/profile.d/conda.sh
