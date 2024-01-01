@@ -1,2 +1,2 @@
 # aibootcamp
-Various resources related to aibootcamp
+Caltech's AI Boot Camp Resources
