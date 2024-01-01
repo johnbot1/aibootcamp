@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+#
 # This slurm submission script will launch a jupyter notebook
 # server on one of the reserved gpu nodes for aibootcamp. You
 # will need to assure a unique port is being used as multiple 
@@ -47,8 +48,8 @@ echo "Your Jupyter process is running on node $SLURM_NODELIST on Port $port"
 # Edit this to match the virtual python environment being used. This
 # example is for conda. 
 
-source /central/groups/imss_admin/jflilley/miniconda3/etc/profile.d/conda.sh
-conda activate jupyter-reza
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate aibootcamp
 which python
 nohup jupyter-notebook --no-browser --port=$port
 
